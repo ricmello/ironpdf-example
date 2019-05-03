@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    networks:
+      - default
+    ports:
+      - "8072:80"
+networks:
+  default:
+    driver: bridge
